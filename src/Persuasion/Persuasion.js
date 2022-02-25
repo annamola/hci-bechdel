@@ -1,4 +1,5 @@
-import "./App.css";
+import Chart1 from "./Chart1/Chart1";
+import chartSpec from "./Chart1/chartspec.json";
 
 function App() {
     return (
@@ -9,12 +10,11 @@ function App() {
                 <section class="home section" id="home">
                     <div class="c">
                         <div class="home__data">
-                            <h1 class="home__title">Designing for Understanding</h1>
+                            <h1 class="home__title">Persuasion</h1>
                         </div>
-                        <div class="container">
-                            <button>Communication</button>
-                            <button>Persuasion</button>
-                        </div>
+                        <Chart1 spec={chartSpec} width={500} chartTitle="Some chart" />
+                        <Chart1 spec={chartSpec} width={500} chartTitle="Some chart" />
+                        <Chart1 spec={chartSpec} width={500} chartTitle="Some chart" />
                     </div>
                 </section>
             </main>

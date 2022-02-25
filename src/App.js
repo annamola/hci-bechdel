@@ -1,4 +1,6 @@
 import "./App.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 function App() {
     return (
@@ -12,8 +14,12 @@ function App() {
                             <h1 class="home__title">Designing for Understanding</h1>
                         </div>
                         <div class="container">
-                            <button>Communication</button>
-                            <button>Persuasion</button>
+                            <button>
+                                <Link to="/communication">Communication</Link>
+                            </button>
+                            <button>
+                                <Link to="/persuasion">Persuasion</Link>
+                            </button>
                         </div>
                     </div>
                 </section>

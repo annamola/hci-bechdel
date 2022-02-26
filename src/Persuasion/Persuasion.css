@@ -1,10 +1,43 @@
-.d3vis {
-    margin: 0rem 10rem 2rem 10rem;
+.title {
+    font-size: 50px;
+    font-weight: 700;
+}
+.sub_title {
+    font-size: 24px;
+}
+.vis {
+    margin: 0rem 5rem 2rem 5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.d3vis svg {
+.vis svg {
     margin: 0.25rem;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+}
+.legend_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 20px;
+}
+.legend_box {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.progress_bar_container {
+    height: 24px;
+    display: flex;
+    margin: 0rem 18rem 0rem 18rem;
+}
+
+.progress_bar {
+    height: 24px;
 }

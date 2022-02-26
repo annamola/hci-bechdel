@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v4.json",
+    "width": 500,
+    "height": 250,
+    "autosize": "fit",
+    "signals": [
+        {
+            "name": "selected",
+            "value": "",
+            "on": [
+                { "events": "arc:click!", "update": "datum" },
+                { "events": "dblclick!", "update": "''" }
+            ]
+        }
+    ],
+    "data": [
+        {
+            "name": "table",
+            "values": [
+                {
+                    "Count": 1,
+                    "Status": "Some data",
+                    "startAngle": 0,
+                    "endAngle": 0.2617993877991494
+                },
+                {
+                    "Count": 5,
+                    "Status": "Another data",
+                    "startAngle": 0.2617993877991494,
+                    "endAngle": 1.5707963267948963
+                },
+                {
+                    "Count": 18,
+                    "Status": "One more data",
+                    "startAngle": 1.5707963267948963,
+                    "endAngle": 6.283185307179586
+                }
+            ],
+            "transform": [{ "type": "pie", "field": "Count", "groupby": ["Status"] }]
+        }
+    ],
+    "scales": [{ "name": "color", "type": "ordinal", "range": { "scheme": "category20" } }],
+    "marks": [
+        {
+            "name": "mark",
+            "type": "arc",
+            "interactive": true,
+            "from": { "data": "table" },
+            "encode": {
+                "enter": {
+                    "fill": { "scale": "color", "field": "Status" },
+                    "x": { "signal": "width / 2" },
+                    "y": { "signal": "height / 2" },
+                    "tooltip": { "signal": "datum" }
+                },
+                "update": {
+                    "startAngle": { "field": "startAngle" },
+                    "endAngle": { "field": "endAngle" },
+                    "padAngle": [{ "value": 0.01 }],
+                    "outerRadius": { "signal": "width / 5" },
+                    "cornerRadius": { "value": 0 },
+                    "innerRadius": { "signal": 45 },
+                    "opacity": [{ "value": 1 }],
+                    "fill": [{ "scale": "color", "field": "Status" }]
+                },
+                "hover": {}
+            }
+        }
+    ]
+}

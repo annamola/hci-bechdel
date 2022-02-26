@@ -1,5 +1,5 @@
-import Chart1 from "./Chart1/Chart1";
-import chartSpec from "./Chart1/chartspec.json";
+import Chart from "../Chart/Chart";
+import chartSpec1 from "./chartspec1.json";
 
 function App() {
     return (
@@ -12,9 +12,9 @@ function App() {
                         <div class="home__data">
                             <h1 class="home__title">Communication</h1>
                         </div>
-                        <Chart1 spec={chartSpec} width={500} chartTitle="Some chart" />
-                        <Chart1 spec={chartSpec} width={500} chartTitle="Some chart" />
-                        <Chart1 spec={chartSpec} width={500} chartTitle="Some chart" />
+                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
+                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
+                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
                     </div>
                 </section>
             </main>

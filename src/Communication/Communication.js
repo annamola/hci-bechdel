@@ -1,7 +1,7 @@
 import Chart from "../Chart/Chart";
 import chartSpec1 from "./chartspec1.json";
 
-function App() {
+function Communication() {
     return (
         <div className="App">
             <header className="header" id="header"></header>
@@ -23,4 +23,4 @@ function App() {
     );
 }
 
-export default App;
+export default Communication;

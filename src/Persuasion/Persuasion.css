@@ -1,1 +1,10 @@
-
+.d3vis {
+    margin: 0rem 10rem 2rem 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.d3vis svg {
+    margin: 0.25rem;
+}

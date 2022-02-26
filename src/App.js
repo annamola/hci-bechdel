@@ -5,15 +5,14 @@ import { Link } from "react-router-dom";
 function App() {
     return (
         <div className="App">
-            <header class="header" id="header"></header>
-
-            <main class="main">
-                <section class="home section" id="home">
-                    <div class="c">
-                        <div class="home__data">
-                            <h1 class="home__title">Designing for Understanding</h1>
+            <header></header>
+            <main className="main">
+                <section className="home section" id="home">
+                    <div className="c">
+                        <div className="home__data">
+                            <h1 className="home__title">Designing for Understanding</h1>
                         </div>
-                        <div class="container">
+                        <div className="container">
                             <button>
                                 <Link to="/communication">Communication</Link>
                             </button>
@@ -24,8 +23,8 @@ function App() {
                     </div>
                 </section>
             </main>
-            <footer class="footer section">
-                <p class="footer__copy">Team Members: Anna, Mohammad, Jenna, Kennedy</p>
+            <footer className="footer section">
+                <p className="footer__copy">Team Members: Anna, Mohammad, Jenna, Kennedy</p>
             </footer>
         </div>
     );

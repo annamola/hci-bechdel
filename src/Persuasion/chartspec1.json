@@ -1,5 +1,5 @@
 {
-    "$schema": "https://vega.github.io/schema/vega/v4.json",
+    "$schema": "https://vega.github.io/schema/vega/v5.21.0.json",
     "width": 500,
     "height": 250,
     "autosize": "fit",
@@ -15,28 +15,9 @@
     ],
     "data": [
         {
-            "name": "table",
-            "values": [
-                {
-                    "Count": 1,
-                    "Status": "Some data",
-                    "startAngle": 0,
-                    "endAngle": 0.2617993877991494
-                },
-                {
-                    "Count": 5,
-                    "Status": "Another data",
-                    "startAngle": 0.2617993877991494,
-                    "endAngle": 1.5707963267948963
-                },
-                {
-                    "Count": 18,
-                    "Status": "One more data",
-                    "startAngle": 1.5707963267948963,
-                    "endAngle": 6.283185307179586
-                }
-            ],
-            "transform": [{ "type": "pie", "field": "Count", "groupby": ["Status"] }]
+            "name": "allTests",
+            "url": "assets/data/nextBechdel_allTests.csv",
+            "format": { "type": "csv", "parse": { "bechdel": "number" } }
         }
     ],
     "scales": [{ "name": "color", "type": "ordinal", "range": { "scheme": "category20" } }],

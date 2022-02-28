@@ -1,5 +1,6 @@
 import Chart from "../Chart/Chart";
 import chartSpec1 from "./chartspec1.json";
+import chartSpec2 from "./chartspec2.json";
 
 function Communication() {
     return (
@@ -22,10 +23,8 @@ function Communication() {
                                 <p>Female Cast Members</p>
                             </div>
                         </div>
-                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
-
-                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
-                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
+                        <Chart spec={chartSpec1} width={700} chartTitle="Some chart" />
+                        <Chart spec={chartSpec2} width={700} chartTitle="Some chart" />
                     </div>
                 </section>
             </main>

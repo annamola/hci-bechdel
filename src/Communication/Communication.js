@@ -23,8 +23,8 @@ function Communication() {
                                 <p>Female Cast Members</p>
                             </div>
                         </div>
-                        <Chart spec={chartSpec1} width={700} chartTitle="Some chart" />
-                        <Chart spec={chartSpec2} width={700} chartTitle="Some chart" />
+                        <Chart spec={chartSpec1} width={700} chartTitle="Gender Distribution of Cast for 50 Top-Grossing Movies from 2016" />
+                        <Chart spec={chartSpec2} width={700} chartTitle="How Many Movies Passed Each Test" />
                     </div>
                 </section>
             </main>

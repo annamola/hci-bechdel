@@ -15,11 +15,11 @@ function Communication() {
                         <div className="legend">
                             <div className="legend_section">
                                 <div className="legend_box" style={{ backgroundColor: "blue" }} />
-                                <p>Failed</p>
+                                <p>Male Cast Members</p>
                             </div>
                             <div className="legend_section">
                                 <div className="legend_box" style={{ backgroundColor: "purple" }} />
-                                <p>Passed</p>
+                                <p>Female Cast Members</p>
                             </div>
                         </div>
                         <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />

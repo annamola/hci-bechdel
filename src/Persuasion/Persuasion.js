@@ -1,15 +1,14 @@
 import "./Persuasion.css";
-import Chart from "../Chart/Chart";
-import chartSpec2 from "./chartspec2.json";
-import chartSpec3 from "./chartspec3.json";
+import CastCrewChart from "../CastCrewChart/CastCrewChart";
+import PieChart from "../PieChart/PieChart";
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 
 function Persuasion() {
     const data = require("../assets/data/nextBechdel_allTests.json");
 
-    const passed_color = "green";
-    const failed_color = "red";
+    const passed_color = "#1b595c";
+    const failed_color = "#ffa600";
 
     function handleColor(e) {
         if (e === 1) {
@@ -33,7 +32,7 @@ function Persuasion() {
     );
 
     function handleMouseOver(e) {
-        console.log(e.movie);
+        // console.log(e.movie);
     }
     return (
         <div className="App">
@@ -54,7 +53,7 @@ function Persuasion() {
                         screen yet there are many gaps in diversity and representation behind the scenes. <br />
                         We're going to take a deep dive in to the most popular movies of 2016 and whether they hold up
                         to the Bechdel test. We will also examine some lesser known tests that look at other aspects of
-                        diversity and represtation that can be overlooked when just using the Bechdel Test.
+                        diversity and representation that can be overlooked when just using the Bechdel Test.
                     </p>
                     <div className="legend">
                         <div className="legend_section">
@@ -69,6 +68,10 @@ function Persuasion() {
                 </div>
                 <div className="vis_container">
                     <p className="sub_title">Bechdel Test</p>
+                    <p>
+                        There are two named female characters<br></br>Do they have at least one conversation that is not
+                        about a man?
+                    </p>
                     <div className="vis">
                         {data.map((movie) => (
                             <LightTooltip key={movie.movie} placement="bottom" title={movie.movie}>
@@ -92,9 +95,16 @@ function Persuasion() {
                         ))}
                     </div>
                 </div>
-                <div className="progress_bar_container" style={{ backgroundColor: "red" }}>
-                    <div className="progress_bar" style={{ width: "64%", backgroundColor: "green" }}></div>
+                <p style={{ marginBottom: "1rem" }} className="para">
+                    <span style={{ fontWeight: "700" }}>64% </span>of movies passed the Bechdel Test.
+                </p>
+                <div className="progress_bar_container" style={{ backgroundColor: failed_color }}>
+                    <div className="progress_bar" style={{ width: "64%", backgroundColor: passed_color }}></div>
                 </div>
+                <p style={{ marginBottom: "1rem", marginTop: "1rem" }} className="para">
+                    But what about other tests that measure other areas of diversity? Let's take a look at the Uphold
+                    Test, White Test, and Waithe Test.
+                </p>
                 <div className="vis_container">
                     <p className="sub_title">Uphold Test</p>
                     <p>The on-set crew is 50 percent women</p>
@@ -118,6 +128,12 @@ function Persuasion() {
                             </LightTooltip>
                         ))}
                     </div>
+                </div>
+                <p style={{ marginBottom: "1rem" }} className="para">
+                    <span style={{ fontWeight: "700" }}>0% </span>of movies passed the Uphold Test.
+                </p>
+                <div className="progress_bar_container" style={{ backgroundColor: failed_color }}>
+                    <div className="progress_bar" style={{ width: "0%", backgroundColor: passed_color }}></div>
                 </div>
                 <div className="vis_container">
                     <p className="sub_title">White Test</p>
@@ -147,8 +163,48 @@ function Persuasion() {
                         ))}
                     </div>
                 </div>
-                <Chart spec={chartSpec2} width={500} chartTitle="Some chart" />
-                <Chart spec={chartSpec3} width={500} chartTitle="Some chart" />
+                <p style={{ marginBottom: "1rem" }} className="para">
+                    <span style={{ fontWeight: "700" }}>0% </span>of movies passed the White Test.
+                </p>
+                <div className="progress_bar_container" style={{ backgroundColor: failed_color }}>
+                    <div className="progress_bar" style={{ width: "0%", backgroundColor: passed_color }}></div>
+                </div>
+                <div className="vis_container">
+                    <p className="sub_title">Waithe Test</p>
+                    <p>
+                        There's a black woman in the work<br></br>
+                        Who's in a position of power<br></br>
+                        And she's in a healthy relationship
+                    </p>
+                    <div className="vis">
+                        {data.map((movie) => (
+                            <LightTooltip key={movie.movie} placement="bottom" title={movie.movie}>
+                                <svg
+                                    style={{ width: "48px", height: "96px" }}
+                                    viewBox="0 0 48 96"
+                                    key={movie.movie}
+                                    onMouseOver={() => handleMouseOver(movie)}
+                                >
+                                    <rect
+                                        stroke={"black"}
+                                        strokeWidth={2}
+                                        fill={handleColor(movie.waithe)}
+                                        width={48}
+                                        height={96}
+                                    ></rect>
+                                </svg>
+                            </LightTooltip>
+                        ))}
+                    </div>
+                </div>
+                <p style={{ marginBottom: "1rem" }} className="para">
+                    <span style={{ fontWeight: "700" }}>10% </span>of movies passed the Waithe Test.
+                </p>
+                <div className="progress_bar_container" style={{ backgroundColor: failed_color }}>
+                    <div className="progress_bar" style={{ width: "10%", backgroundColor: passed_color }}></div>
+                </div>
+                <PieChart></PieChart>
+                <CastCrewChart></CastCrewChart>
             </div>
             <footer></footer>
         </div>

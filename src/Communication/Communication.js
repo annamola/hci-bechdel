@@ -14,11 +14,11 @@ function Communication() {
                         </div>
                         <div className="legend">
                             <div className="legend_section">
-                                <div className="legend_box" style={{ backgroundColor: "blue" }} />
+                                <div className="legend_box" style={{ backgroundColor: "#5ec962" }} />
                                 <p>Male Cast Members</p>
                             </div>
                             <div className="legend_section">
-                                <div className="legend_box" style={{ backgroundColor: "purple" }} />
+                                <div className="legend_box" style={{ backgroundColor: "#440154" }} />
                                 <p>Female Cast Members</p>
                             </div>
                         </div>

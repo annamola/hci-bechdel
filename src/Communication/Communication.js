@@ -1,5 +1,6 @@
 import Chart from "../Chart/Chart";
 import chartSpec1 from "./chartspec1.json";
+import chartSpec2 from "./chartspec2.json";
 
 function Communication() {
     return (
@@ -14,18 +15,16 @@ function Communication() {
                         </div>
                         <div className="legend">
                             <div className="legend_section">
-                                <div className="legend_box" style={{ backgroundColor: "blue" }} />
-                                <p>Failed</p>
+                                <div className="legend_box" style={{ backgroundColor: "#5ec962" }} />
+                                <p>Male Cast Members</p>
                             </div>
                             <div className="legend_section">
-                                <div className="legend_box" style={{ backgroundColor: "purple" }} />
-                                <p>Passed</p>
+                                <div className="legend_box" style={{ backgroundColor: "#440154" }} />
+                                <p>Female Cast Members</p>
                             </div>
                         </div>
-                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
-
-                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
-                        <Chart spec={chartSpec1} width={500} chartTitle="Some chart" />
+                        <Chart spec={chartSpec1} width={700} chartTitle="Some chart" />
+                        <Chart spec={chartSpec2} width={700} chartTitle="Some chart" />
                     </div>
                 </section>
             </main>

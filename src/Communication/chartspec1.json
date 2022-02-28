@@ -1,70 +1,182 @@
 {
-    "$schema": "https://vega.github.io/schema/vega/v4.json",
-    "width": 500,
-    "height": 250,
-    "autosize": "fit",
-    "signals": [
-        {
-            "name": "selected",
-            "value": "",
-            "on": [
-                { "events": "arc:click!", "update": "datum" },
-                { "events": "dblclick!", "update": "''" }
-            ]
-        }
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A basic stacked bar chart example.",
+  "width": 700,
+  "height": 200,
+  "padding": 5,
+  "mark": "bar",
+  "data": [
+    {
+      "name": "table",
+      "values": [
+      {"x": "Hacksaw Ridge", "y": 5.6, "c": 0}, {"x": "Hacksaw Ridge", "y": 94.4, "c": 1},
+
+      {"x": "The Magnificent Seven", "y": 6.25, "c": 0}, {"x": "The Magnificent Seven", "y": 93.75, "c": 1},
+
+      {"x": "Jason Bourne", "y": 14, "c": 0}, {"x": "Jason Bourne", "y": 86, "c": 1},
+
+      {"x": "Central Intelligence", "y": 16, "c": 0}, {"x": "Central Intelligence", "y": 84, "c": 1},
+
+       {"x": "The Legend of Tarzan", "y": 17.2, "c": 0}, {"x": "The Legend of Tarzan", "y": 82.8, "c": 1},
+
+      {"x": "Rogue One: A Star Wars Story", "y": 18.2, "c": 0}, {"x": "Rogue One: A Star Wars Story", "y": 81.8, "c": 1},
+
+      {"x": "The Jungle Book", "y": 18.2, "c": 0}, {"x": "The Jungle Book", "y": 81.8, "c": 1},
+
+      {"x": "Suicide Squad", "y": 18.5, "c": 0}, {"x": "Suicide Squad", "y": 81.5, "c": 1},
+
+      {"x": "Tyler Perry’s Boo! A Madea Halloween", "y" : 19, "c": 0}, {"x": "Tyler Perry’s Boo! A Madea Halloween", "y" : 81, "c": 1},
+
+      {"x": "The Secret Life of Pets", "y": 19.4, "c": 0}, {"x": "The Secret Life of Pets", "y": 80.6, "c": 1},
+
+       {"x": "X-Men: Apocalypse", "y": 20, "c": 0}, {"x": "X-Men: Apocalypse", "y": 80, "c": 1},
+
+      {"x": "Teenage Mutant Ninja Turtles: Out of the Shadows", "y": 21.7, "c": 0}, {"x": "Teenage Mutant Ninja Turtles: Out of the Shadows", "y": 78.3, "c": 1},
+
+      {"x": "Captain America: Civil War", "y": 23.1, "c": 0}, {"x": "Captain America: Civil War", "y": 76.9, "c": 1},
+
+      {"x": "The Accountant", "y": 24.1, "c": 0}, {"x": "The Accountant", "y": 75.9, "c": 1},
+
+      {"x": "Sausage Party", "y": 24.2, "c": 0}, {"x": "Sausage Party", "y": 75.8, "c": 1},
+
+      {"x": "Sully", "y": 24.5, "c": 0}, {"x": "Sully", "y": 75.5, "c": 1},
+
+      {"x": "Now You See Me 2", "y": 25, "c": 0}, {"x": "Now You See Me 2", "y": 75, "c": 1},
+
+      {"x": "Kung Fu Panda 3", "y": 25, "c": 0}, {"x": "Kung Fu Panda 3", "y": 75, "c": 1},
+
+      {"x": "Fantastic Beasts and Where to Find Them", "y": 26.2, "c": 0}, {"x": "Fantastic Beasts and Where to Find Them", "y": 73.8, "c": 1},
+
+      {"x": "The Purge: Election Year", "y": 26.8, "c": 0}, {"x": "The Purge: Election Year", "y": 73.2, "c": 1},
+
+      {"x": "Doctor Strange", "y": 27.6, "c": 0}, {"x": "Doctor Strange", "y": 72.4, "c": 1},
+
+      {"x": "Independence Day: Resurgence", "y": 28.6, "c": 0}, {"x": "Independence Day: Resurgence", "y": 71.4, "c": 1},
+
+    {"x": "Finding Dory", "y": 28.6, "c": 0}, {"x": "Finding Dory", "y": 71.4, "c": 1},
+
+      {"x": "Sing", "y": 29, "c": 0}, {"x": "Sing", "y": 71, "c": 1},
+
+      {"x": "Batman v Superman: Dawn of Justice", "y": 29.5, "c": 0}, {"x": "Batman v Superman: Dawn of Justice", "y": 70.5, "c": 1},
+
+      {"x": "Ghostbusters", "y": 29.6, "c": 0}, {"x": "Ghostbusters", "y": 70.4, "c": 1},
+
+       {"x": "10 Cloverfield Lane", "y": 30, "c": 0}, {"x": "10 Cloverfield Lane", "y": 70, "c": 1},
+
+       {"x": "Ride Along 2", "y": 30, "c": 0}, {"x": "Ride Along 2", "y": 70, "c": 1},
+
+       {"x": "Miss Peregrine’s Home for Peculiar Children", "y": 30.2, "c": 0}, {"x": "Miss Peregrine’s Home for Peculiar Children", "y": 69.8, "c": 1},
+
+       {"x": "Zootopia", "y": 31.25, "c": 0}, {"x": "Zootopia", "y": 68.75, "c": 1},
+
+       {"x": "Deadpool", "y": 32.4, "c": 0}, {"x": "Deadpool", "y": 67.6, "c": 1},
+
+      {"x": "Hidden Figures", "y": 33, "c": 0}, {"x": "Hidden Figures", "y": 67, "c": 1}, 
+
+      {"x": "Ice Age: Collision Course", "y": 33, "c": 0}, {"x": "Ice Age: Collision Course", "y": 67, "c": 1}, 
+
+      {"x": "Arrival", "y": 35, "c": 0}, {"x": "Arrival", "y": 65, "c": 1},
+
+      {"x": "The Girl on the Train", "y": 35, "c": 0}, {"x": "The Girl on the Train", "y": 65, "c": 1},
+
+      {"x": "The Angry Birds Movie", "y": 36.2, "c": 0}, {"x": "The Angry Birds Movie", "y": 63.8, "c": 1},
+
+      {"x": "Alice Through the Looking Glass", "y": 39.1, "c": 0}, {"x": "Alice Through the Looking Glass", "y": 60.9, "c": 1},
+
+      {"x": "The Divergent Series: Allegiant", "y": 39.6, "c": 0}, {"x": "The Divergent Series: Allegiant", "y": 60.4, "c": 1},
+
+      {"x": "Passengers", "y": 40.7, "c": 0}, {"x": "Passengers", "y": 59.3, "c": 1},
+
+      {"x": "La La Land", "y": 40.8, "c": 0}, {"x": "La La Land", "y": 59.2, "c": 1},
+
+      {"x": "Star Trek Beyond", "y": 41.4, "c": 0}, {"x": "Star Trek Beyond", "y": 58.6, "c": 1},
+
+        {"x": "Moana", "y": 42.9, "c": 0}, {"x": "Moana", "y": 57.1, "c": 1},
+
+      {"x": "The Conjuring 2: The Enfield Poltergeist", "y": 46.9, "c": 0}, {"x": "The Conjuring 2: The Enfield Poltergeist", "y": 53.1, "c": 1},
+
+      {"x": "Trolls", "y": 46.9, "c": 0}, {"x": "Trolls", "y": 53.1, "c": 1},
+
+      {"x": "The Boss", "y": 48.6, "c": 0}, {"x": "The Boss", "y": 51.4, "c": 1},
+
+      {"x": "Don't Breathe", "y": 50, "c": 0}, {"x": "Don't Breathe", "y": 50, "c": 1}, 
+
+      {"x": "Bad Moms", "y": 62.5, "c": 0}, {"x": "Bad Moms", "y": 37.5, "c": 1},
+
+      {"x": "Lights Out", "y": 71.4, "c": 0}, {"x": "Lights Out", "y": 28.6, "c": 1}
     ],
-    "data": [
+      "transform": [
         {
-            "name": "table",
-            "values": [
-                {
-                    "Count": 1,
-                    "Status": "Some data",
-                    "startAngle": 0,
-                    "endAngle": 0.2617993877991494
-                },
-                {
-                    "Count": 5,
-                    "Status": "Another data",
-                    "startAngle": 0.2617993877991494,
-                    "endAngle": 1.5707963267948963
-                },
-                {
-                    "Count": 18,
-                    "Status": "One more data",
-                    "startAngle": 1.5707963267948963,
-                    "endAngle": 6.283185307179586
-                }
-            ],
-            "transform": [{ "type": "pie", "field": "Count", "groupby": ["Status"] }]
+          "type": "stack",
+          "groupby": ["x"],
+          "sort": {"field": "c"},
+          "field": "y"
         }
-    ],
-    "scales": [{ "name": "color", "type": "ordinal", "range": { "scheme": "category20" } }],
-    "marks": [
-        {
-            "name": "mark",
-            "type": "arc",
-            "interactive": true,
-            "from": { "data": "table" },
-            "encode": {
-                "enter": {
-                    "fill": { "scale": "color", "field": "Status" },
-                    "x": { "signal": "width / 2" },
-                    "y": { "signal": "height / 2" },
-                    "tooltip": { "signal": "datum" }
-                },
-                "update": {
-                    "startAngle": { "field": "startAngle" },
-                    "endAngle": { "field": "endAngle" },
-                    "padAngle": [{ "value": 0.01 }],
-                    "outerRadius": { "signal": "width / 5" },
-                    "cornerRadius": { "value": 0 },
-                    "innerRadius": { "signal": 45 },
-                    "opacity": [{ "value": 1 }],
-                    "fill": [{ "scale": "color", "field": "Status" }]
-                },
-                "hover": {}
+      ]
+    }
+  ],
+  
+  "scales": [
+    {
+      "name": "x",
+      "type": "band",
+      "range": "width",
+      "domain": {"data": "table", "field": "x"}
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "range": "height",
+      "nice": true, "zero": true,
+      "domain": {"data": "table", "field": "y1"}
+    },
+
+    {
+      "name": "color",
+      "field": "c",
+      "type": "sequential",
+      "range": ["#440154", "#5ec962"],
+      "domain": {"data": "table", "field": "c"}
+    }
+  ],
+
+  "axes": [
+    {"orient": "bottom", "scale": "x", "zindex": 1, "labelOverlap":false, "domain": false, "title": "50 top-grossing movies from 2016",
+    "encode": {
+          "labels": {
+            "update": {
+              "angle": {"value": -50},
+              "fontSize": {"value": 10},
+              "align": {"value": "right"}
+
             }
+          }
         }
-    ]
+    },  
+    {"orient": "left", "scale": "y", "zindex": 1, "title": "percentage of cast"}
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "x", "field": "x"},
+          "width": {"scale": "x", "band": 1, "offset": -2},
+          "y": {"scale": "y", "field": "y0"},
+          "y2": {"scale": "y", "field": "y1"},
+          "fill": {"scale": "color", "field": "c"},
+
+        },
+        "update": {
+          "fillOpacity": {"value": 1}
+        },
+        "hover": {
+          "fillOpacity": {"value": 0.2},
+          "tooltip": {"field": "y", "type": "quantitative"}
+        }
+      }
+    }
+  ]
 }

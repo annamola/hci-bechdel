@@ -54,12 +54,12 @@ function Communication() {
                         <p> Let’s take a closer look at one move that fell in the mid range of the first chart — Finding Dory.  
                         Hover over each section of the of the donut to see the gender distribution for both the cast and crew of this film. </p>    
                         <Chart
-                            spec={sing_cast}
+                            spec={castpie2}
                             width={700}
                             chartTitle="Gender Distribution of Cast in Finding Dory (2016)"
                         />
                         <Chart
-                            spec={crew}
+                            spec={crewpie}
                             width={700}
                             chartTitle="Gender Distribution of Crew in Finding Dory (2016)"
                         />

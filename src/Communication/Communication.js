@@ -44,12 +44,12 @@ function Communication() {
                         <Chart
                             spec={sing_cast}
                             width={700}
-                            chartTitle="Cast and Crew Gender Distribution for Finding Dory (2016)"
+                            chartTitle="Gender Distribution of Cast in Finding Dory (2016)"
                         />
                         <Chart
                             spec={crew}
                             width={700}
-                            chartTitle="Cast and Crew Gender Distribution for Finding Dory (2016)"
+                            chartTitle="Gender Distribution of Crew in Finding Dory (2016)"
                         />
                     </div>
                 </section>

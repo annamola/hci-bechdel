@@ -331,7 +331,7 @@
                 }
             }
         },
-        { "orient": "left", "scale": "yscale", "title": "Number of Passing Movies (of top 50 grossing)" }
+        { "orient": "left", "scale": "yscale", "title": "Number of Passing Movies" }
     ],
 
     "marks": [

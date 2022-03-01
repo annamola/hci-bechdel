@@ -35,7 +35,24 @@ function CastCrewChart(props) {
             }
             return 0;
         });
+        var num_total = newdata.length;
+        var num_female = newdata.filter((obj) => obj.GENDER_GUESS === "female").length;
+        console.log(num_female / num_total);
         return newdata;
+    }
+    const percent_crew = percent_calc().toPrecision(3) + "%";
+    const percent_cast = percent_calc_cast().toPrecision(3) + "%";
+    function percent_calc() {
+        const newdata = handleMovieSelection_crew_data(crew_data);
+        var num_total = newdata.length;
+        var num_female = newdata.filter((obj) => obj.GENDER_GUESS === "female").length;
+        return (num_female / num_total) * 100;
+    }
+    function percent_calc_cast() {
+        const newdata = handleMovieSelection_cast_data(crew_data);
+        var num_total = newdata.length;
+        var num_female = newdata.filter((obj) => obj.GENDER === "Female").length;
+        return (num_female / num_total) * 100;
     }
     function handleMovieSelection_cast_data(e) {
         var newdata = cast_data.filter((obj) => obj.MOVIE === castMovie);
@@ -83,10 +100,10 @@ function CastCrewChart(props) {
     return (
         <div>
             <p className="para">
-                The White test looks into the gender makeup of some of the movies. Here is a breakdown of every crew
-                memeber credited by gender.
+                The White test looks into the gender makeup of some of the movies. Let's look closer at the data. Here
+                is a breakdown of every crew member ordered by gender. Each square represents a member of the crew that
+                worked on the selected movie.
             </p>
-
             <div className="legend">
                 <div className="legend_section">
                     <div className="legend_box" style={{ backgroundColor: "#ffa600" }} />
@@ -129,6 +146,12 @@ function CastCrewChart(props) {
                     </LightTooltip>
                 ))}
             </div>
+            <p style={{ marginBottom: "1rem" }} className="para">
+                <span style={{ fontWeight: "700" }}>{percent_crew}</span> of the crew is female.
+            </p>
+            <div className="progress_bar_container" style={{ backgroundColor: "#1b595c" }}>
+                <div className="progress_bar" style={{ width: percent_crew, backgroundColor: "#ffa600" }}></div>
+            </div>
             <p className="para">
                 The White test looks into the gender makeup of some of the movies. Here is a breakdown of every crew
                 member credited by gender.
@@ -160,6 +183,12 @@ function CastCrewChart(props) {
                         </svg>
                     </LightTooltip>
                 ))}
+            </div>
+            <p style={{ marginBottom: "1rem" }} className="para">
+                <span style={{ fontWeight: "700" }}>{percent_cast}</span> of the cast is female.
+            </p>
+            <div className="progress_bar_container" style={{ backgroundColor: "#1b595c", marginBottom: "10rem" }}>
+                <div className="progress_bar" style={{ width: percent_cast, backgroundColor: "#ffa600" }}></div>
             </div>
         </div>
     );

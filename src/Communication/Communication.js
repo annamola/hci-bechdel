@@ -1,6 +1,7 @@
 import Chart from "../Chart/Chart";
 import chartSpec1 from "./chartspec1.json";
 import chartSpec2 from "./chartspec2.json";
+import chartSpec3 from "./chartspec3.json";
 
 function Communication() {
     return (
@@ -13,6 +14,7 @@ function Communication() {
                         <div className="home__data">
                             <h1 className="home__title">Communication</h1>
                         </div>
+                        <p>HELLO!!</p>
                         <div className="legend">
                             <div className="legend_section">
                                 <div className="legend_box" style={{ backgroundColor: "#5ec962" }} />
@@ -23,8 +25,17 @@ function Communication() {
                                 <p>Female Cast Members</p>
                             </div>
                         </div>
-                        <Chart spec={chartSpec1} width={700} chartTitle="Gender Distribution of Cast for 50 Top-Grossing Movies from 2016" />
+                        <Chart
+                            spec={chartSpec1}
+                            width={700}
+                            chartTitle="Gender Distribution of Cast for 50 Top-Grossing Movies from 2016"
+                        />
                         <Chart spec={chartSpec2} width={700} chartTitle="How Many Movies Passed Each Test" />
+                        <Chart
+                            spec={chartSpec3}
+                            width={700}
+                            chartTitle="Cast and Crew Gender Distribution for Sing (2016)"
+                        />
                     </div>
                 </section>
             </main>

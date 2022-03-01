@@ -311,7 +311,8 @@
             "name": "yscale",
             "domain": { "data": "table", "field": "Total" },
             "nice": true,
-            "range": "height"
+            "range": "height",
+            "domainMax": 50
         }
     ],
 

@@ -37,8 +37,8 @@ function Communication() {
 
                         <p>
                             {" "}
-                            This stacked bar chart shows the proportion of male to female cast members in the 50
-                            top-grossing films of 2016. To see the exact proportions, hover over each bar.
+                            This stacked bar chart shows the percentage of male and female cast members in the 50
+                            top-grossing films of 2016. To see the exact percentages, hover over each bar.
                         </p>
 
                         <div className="legend">

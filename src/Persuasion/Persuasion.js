@@ -1,6 +1,5 @@
 import "./Persuasion.css";
 import CastCrewChart from "../CastCrewChart/CastCrewChart";
-import PieChart from "../PieChart/PieChart";
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 
@@ -203,7 +202,6 @@ function Persuasion() {
                 <div className="progress_bar_container" style={{ backgroundColor: failed_color }}>
                     <div className="progress_bar" style={{ width: "10%", backgroundColor: passed_color }}></div>
                 </div>
-                <PieChart></PieChart>
                 <CastCrewChart></CastCrewChart>
             </div>
             <footer></footer>

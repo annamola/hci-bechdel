@@ -346,10 +346,10 @@
                     "y2": { "scale": "yscale", "value": 0 }
                 },
                 "update": {
-                    "fill": { "value": "#003f5c" }
+                    "fill": { "value": "#440154" }
                 },
                 "hover": {
-                    "fill": { "value": "#ffa600" },
+                    "fill": { "value": "#5ec962" },
                     "tooltip": { "field": "Desc", "type": "qualitative" }
                 }
             }

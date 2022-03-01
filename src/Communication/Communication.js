@@ -14,7 +14,7 @@ function Communication() {
                         <div className="home__data">
                             <h1 className="home__title">Communication</h1>
                         </div>
-                        <p>HELLO!!</p>
+                        <p>The Bechdel test was created in 1985 as a metric to determine the portrayal of women in film.  To pass the Bechdel test, a film must have two named female characters who have at least one conversation that is not primarily about a man.  As the movie industry becomes increasingly more representative, tests with more specific criteria have been created.  These tests can generally be categorized into four categories: “protagonist”, that analyzes presence of stereotypes in female protagonists; “supporting cast”, that looks at the gender distribution of smaller roles; “intersectionality”, that examines the amount of non-white women in film; and “crew”, that looks at the number of women behind the camera.</p>
                         <div className="legend">
                             <div className="legend_section">
                                 <div className="legend_box" style={{ backgroundColor: "#5ec962" }} />

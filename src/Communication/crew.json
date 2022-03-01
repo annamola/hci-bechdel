@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "values": [
+      {
+        "distribution of crew": "crew: men",
+        "value": 73.95,
+        "txt": "73.95% of the crew is male"
+      },
+      {
+        "distribution of crew": "crew: women",
+        "value": 26.04,
+        "txt": "26.04% of the crew is female"
+      }
+    ]
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "distribution of crew", "type": "nominal"},
+    "tooltip": {"field": "txt", "type": "nominal"}
+  },
+  "config": {}
+}

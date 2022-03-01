@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "values": [
+      {
+        "distribution of cast": "women",
+        "value": 28.57,
+        "txt": "28.57% of the cast is female"
+      },
+      {
+        "distribution of cast": "men",
+        "value": 71.43,
+        "txt": "71.43% of the cast is male"
+      }
+    ]
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "distribution of cast", "type": "nominal"},
+    "tooltip": {"field": "txt", "type": "nominal"}
+  },
+  "config": {}
+}

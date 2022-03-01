@@ -55,12 +55,13 @@ function CastCrewChart(props) {
         return newdata;
     }
     useEffect(() => {
+        let abortController = new AbortController();
+
         handleMovieSelection_crew_data(crewMovie);
         handleMovieSelection_cast_data(castMovie);
 
         return () => {
-            handleMovieSelection_crew_data(crewMovie);
-            handleMovieSelection_cast_data(castMovie);
+            abortController.abort();
         };
     });
 

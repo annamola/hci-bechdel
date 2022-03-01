@@ -35,9 +35,6 @@ function CastCrewChart(props) {
             }
             return 0;
         });
-        var num_total = newdata.length;
-        var num_female = newdata.filter((obj) => obj.GENDER_GUESS === "female").length;
-        console.log(num_female / num_total);
         return newdata;
     }
     const percent_crew = percent_calc().toPrecision(3) + "%";
@@ -57,7 +54,6 @@ function CastCrewChart(props) {
     function handleMovieSelection_cast_data(e) {
         var newdata = cast_data.filter((obj) => obj.MOVIE === castMovie);
         newdata = newdata.filter((obj) => obj.GENDER === "Male" || obj.GENDER === "Female");
-        console.log(newdata.keys);
         newdata = newdata.sort(function (a, b) {
             let x = a.GENDER.toLowerCase();
             let y = b.GENDER.toLowerCase();

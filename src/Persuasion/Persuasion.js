@@ -179,6 +179,17 @@ function Persuasion() {
                     <div className="progress_bar" style={{ width: "10%", backgroundColor: passed_color }}></div>
                 </div>
                 <CastCrewChart></CastCrewChart>
+                <iframe
+                    height="600"
+                    style={{ width: "100%" }}
+                    scrolling="no"
+                    title="D3 Pie Chart"
+                    src="https://codepen.io/mhalhamdan/embed/vYWVoLR?default-tab=result&theme-id=light"
+                    frameBorder="no"
+                    loading="lazy"
+                    allowTransparency={true}
+                    allowFullScreen={true}
+                ></iframe>
             </div>
             <footer></footer>
         </div>

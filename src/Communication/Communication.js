@@ -25,6 +25,13 @@ function Communication() {
                             distribution of smaller roles; “intersectionality”, that examines the amount of non-white
                             women in film; and “crew”, that looks at the number of women behind the camera.
                         </p>
+                         <p> This bar plot shows the number of top-grossing films of 2016 that passed the Bechdel tests, 
+                            as well as one test from each of the four newer categories.  Hovering over each bar will give more 
+                            information about each test’s criteria.  Since none of the 50 films passed the Uphold test, there is 
+                            no bar for it.  To pass an Uphold test, the on-set crew must be 50% women.</p>
+        
+                        <Chart spec={chartSpec2} width={700} chartTitle="How Many Movies Passed Each Test" />
+                       
                         <p> This stacked bar chart shows the proportion of male to female cast members in the 50 top-grossing 
                         films of 2016. To see the exact proportions, hover over each bar.
                         </p>
@@ -45,12 +52,7 @@ function Communication() {
                             chartTitle="Gender Distribution of Cast for 50 Top-Grossing Movies from 2016"
                         />
                         </div>
-                        <p> This bar plot shows the number of top-grossing films of 2016 that passed the Bechdel tests, 
-                            as well as one test from each of the four newer categories.  Hovering over each bar will give more 
-                            information about each test’s criteria.  Since none of the 50 films passed the Uphold test, there is 
-                            no bar for it.  To pass an Uphold test, the on-set crew must be 50% women.</p>
-                        <Chart spec={chartSpec2} width={700} chartTitle="How Many Movies Passed Each Test" />
-                       
+                        
                         <p> Let’s take a closer look at one move that fell in the mid range of the first chart — Finding Dory.  
                         Hover over each section of the of the donut to see the gender distribution for both the cast and crew of this film. </p>    
                         <Chart

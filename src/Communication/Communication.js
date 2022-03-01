@@ -32,9 +32,14 @@ function Communication() {
                         />
                         <Chart spec={chartSpec2} width={700} chartTitle="How Many Movies Passed Each Test" />
                         <Chart
-                            spec={chartSpec3}
+                            spec={sing_cast}
                             width={700}
-                            chartTitle="Cast and Crew Gender Distribution for Sing (2016)"
+                            chartTitle="Cast and Crew Gender Distribution for Finding Dory (2016)"
+                        />
+                                <Chart
+                            spec={crew}
+                            width={700}
+                            chartTitle="Cast and Crew Gender Distribution for Finding Dory (2016)"
                         />
                     </div>
                 </section>

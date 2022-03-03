@@ -44,14 +44,14 @@ function Persuasion() {
                     </p>
 
                     <ul className="para">
-                        <li>Does it have at least two named female characters?</li>
+                        <li>Does the movie have at least two named female characters?</li>
                         <li>And do those characters have at least one conversation that is not about a man?</li>
                     </ul>
                     <p className="para">
                         It's shocking how many movies still do not pass this test. Every year representation improves on
-                        screen yet there are many gaps in diversity and representation behind the scenes. <br />
-                        We're going to take a deep dive in to the most popular movies of 2016 and whether they hold up
-                        to the Bechdel test. We will also examine some lesser known tests that look at other aspects of
+                        screen yet there are many gaps in diversity and representation behind the camera. <br />
+                        We're going to take a deep dive into the most popular movies of 2016 and whether they hold up to
+                        the Bechdel test. We will also examine some lesser known tests that look at other aspects of
                         diversity and representation that can be overlooked when just using the Bechdel Test.
                     </p>
                     <div className="legend">
@@ -80,13 +80,7 @@ function Persuasion() {
                                     key={movie.movie}
                                     onMouseOver={() => handleMouseOver(movie)}
                                 >
-                                    <rect
-                                        stroke={"black"}
-                                        strokeWidth={2}
-                                        fill={handleColor(movie.bechdel)}
-                                        width={48}
-                                        height={96}
-                                    >
+                                    <rect fill={handleColor(movie.bechdel)} width={48} height={96}>
                                         {movie.bechdel}
                                     </rect>
                                 </svg>
@@ -116,13 +110,7 @@ function Persuasion() {
                                     key={movie.movie}
                                     onMouseOver={() => handleMouseOver(movie)}
                                 >
-                                    <rect
-                                        stroke={"black"}
-                                        strokeWidth={2}
-                                        fill={handleColor(movie.uphold)}
-                                        width={48}
-                                        height={96}
-                                    ></rect>
+                                    <rect fill={handleColor(movie.uphold)} width={48} height={96}></rect>
                                 </svg>
                             </LightTooltip>
                         ))}
@@ -150,13 +138,7 @@ function Persuasion() {
                                     key={movie.movie}
                                     onMouseOver={() => handleMouseOver(movie)}
                                 >
-                                    <rect
-                                        stroke={"black"}
-                                        strokeWidth={2}
-                                        fill={handleColor(movie.white)}
-                                        width={48}
-                                        height={96}
-                                    ></rect>
+                                    <rect fill={handleColor(movie.white)} width={48} height={96}></rect>
                                 </svg>
                             </LightTooltip>
                         ))}
@@ -184,13 +166,7 @@ function Persuasion() {
                                     key={movie.movie}
                                     onMouseOver={() => handleMouseOver(movie)}
                                 >
-                                    <rect
-                                        stroke={"black"}
-                                        strokeWidth={2}
-                                        fill={handleColor(movie.waithe)}
-                                        width={48}
-                                        height={96}
-                                    ></rect>
+                                    <rect fill={handleColor(movie.waithe)} width={48} height={96}></rect>
                                 </svg>
                             </LightTooltip>
                         ))}
@@ -199,10 +175,23 @@ function Persuasion() {
                 <p style={{ marginBottom: "1rem" }} className="para">
                     <span style={{ fontWeight: "700" }}>10% </span>of movies passed the Waithe Test.
                 </p>
-                <div className="progress_bar_container" style={{ backgroundColor: failed_color }}>
+                <div className="progress_bar_container" style={{ backgroundColor: failed_color, marginBottom: "3rem" }}>
                     <div className="progress_bar" style={{ width: "10%", backgroundColor: passed_color }}></div>
                 </div>
                 <CastCrewChart></CastCrewChart>
+                <div className="iframe_container">
+                    <iframe
+                        height="700"
+                        style={{ width: "100%" }}
+                        scrolling="no"
+                        title="D3 Pie Chart"
+                        src="https://codepen.io/mhalhamdan/embed/vYWVoLR?default-tab=result&theme-id=light"
+                        frameBorder="no"
+                        loading="lazy"
+                        allowTransparency={true}
+                        allowFullScreen={true}
+                    ></iframe>
+                </div>
             </div>
             <footer></footer>
         </div>

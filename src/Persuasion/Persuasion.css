@@ -56,6 +56,23 @@
 .select_movie {
     margin: 1rem 1rem 1rem 1rem;
 }
+
+.iframe_container {
+    margin: 0rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background: rgb(245, 245, 245);
+}
+
+#result-box.zoom-05 iframe {
+    width: 200% !important;
+    height: 200% !important;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
 /*Targeting screen sizes between 768px & 1240px */
 
 @media (min-width: 768px) and (max-width: 1240px) {
